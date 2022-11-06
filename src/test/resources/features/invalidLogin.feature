@@ -1,4 +1,4 @@
-@UpgenixInvalidLoginFunctionality
+@UpgenixLoginFunctionality
 Feature: Upgenix login functionality with invalid credentials
   Agile story: As a user, I should try invalid credentials log in so that I can not land on homepage.
 
@@ -10,10 +10,10 @@ Feature: Upgenix login functionality with invalid credentials
     Then user should see "Wrong login/password" message
     Examples:
       | username                 | password     |
-      | salesmanager-1@info.com  | salesmanager |
-      | salesmanager550@info.com | salesmanager |
-      | posmanager----@info.com  | posmanager   |
-      | posmanager5000@info.com  | posmanager   |
+      | salesmanager@info.com    | salesmanager |
+      | salesmanager106@info.com | salesmanager |
+      | posmanager156@info.com   | posmanager   |
+      | posmanager@info.com      | posmanager   |
 
   @UPGN-802
   Scenario Outline: User can not login with invalid password

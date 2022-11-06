@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/mhgulay/step_definitions",
         dryRun = false,
-        tags = "@UPGN-233"
+        tags = "@logout"
 )
 
 public class CukesRunner {

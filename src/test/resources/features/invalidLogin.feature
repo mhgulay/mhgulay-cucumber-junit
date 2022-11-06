@@ -2,8 +2,8 @@
 Feature: Upgenix login functionality with invalid credentials
   Agile story: As a user, I should try invalid credentials log in so that I can not land on homepage.
 
-  @UPGN-1
-  Scenario Outline: User can not login with invalid credentials
+  @UPGN-800
+  Scenario Outline: User can not login with invalid email
     When user should be on the login page
     And user can try to invalid "<username>" in email box
     And user can try to valid "<password>" in password box
@@ -15,8 +15,8 @@ Feature: Upgenix login functionality with invalid credentials
       | posmanager----@info.com  | posmanager   |
       | posmanager5000@info.com  | posmanager   |
 
-  @UPGN-233
-  Scenario Outline: User can not login with invalid credentials
+  @UPGN-802
+  Scenario Outline: User can not login with invalid password
     When user should be on the login page
     And user can try to valid "<username>" in email box
     And user can try to invalid "<password>" in password box
@@ -27,8 +27,8 @@ Feature: Upgenix login functionality with invalid credentials
       | salesmanager55@info.com | manager.?       |
       | posmanager55@info.com   | posmanager---   |
 
-  @UPGN-mes
     #Please fill out this field" message should be displayed if the password or username is empty
+  @UPGN-803
   Scenario Outline: User can not login with empty password
     When user should be on the login page
     And user can try to valid "<username>" in email box
@@ -40,8 +40,8 @@ Feature: Upgenix login functionality with invalid credentials
       | posmanager55@info.com   |
       | posmanager155@info.com  |
 
-  @UPGN-mes
     #Please fill out this field" message should be displayed if the password or username is empty
+  @UPGN-804
   Scenario Outline: User can not login with empty username
     When user should be on the login page
     And user can try to invalid "<password>" in password box
@@ -49,4 +49,4 @@ Feature: Upgenix login functionality with invalid credentials
     Examples:
       | password     |
       | salesmanager |
-      | salesmanager |
+      | posmanager   |

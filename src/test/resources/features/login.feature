@@ -14,7 +14,7 @@ Feature: Upgenix login functionality with valid credentials
       | salesmanager55@info.com  | salesmanager |
       | salesmanager105@info.com | salesmanager |
 
-  @UPGN-
+  @UPGN-801
   Scenario Outline: Posmanager can login with valid credentials
     When user should be on the login page
     And user can try to valid "<username>" in email box
@@ -27,28 +27,29 @@ Feature: Upgenix login functionality with valid credentials
       | posmanager155@info.com | posmanager |
 
     #User should see the password in bullet signs by default while typing (like ****)
-  @UPGN-star
-  Scenario Outline: Posmanager can login with valid credentials
+  @UPGN-805
+  Scenario Outline: User should see the password in bullet signs login
     When user should be on the login page
     And user can try to valid "<username>" in email box
     And user can try to valid "<password>" in password box wait
     Then user check input type "password"
     Examples:
-      | username              | password   |
-      | posmanager10@info.com | posmanager |
+      | username                | password     |
+      | posmanager10@info.com   | posmanager   |
+      | salesmanager10@info.com | salesmanager |
 
 
-  @UPGN-enter
-  Scenario Outline: Salesmanager can login with valid credentials with enter key
+  @UPGN-806
+  Scenario Outline: User can login with valid credentials with enter key
     When user should be on the login page
     And user can try to valid "<username>" in email box
     And user can try to valid "<password>" in password box with enter key
     Then user should see the main page title like "#Inbox - Odoo"
     Examples:
-      | username                 | password     |
-      | salesmanager10@info.com  | salesmanager |
-      | salesmanager55@info.com  | salesmanager |
-      | posmanager10@info.com    | posmanager   |
-      | posmanager55@info.com    | posmanager   |
+      | username                | password     |
+      | salesmanager10@info.com | salesmanager |
+      | salesmanager55@info.com | salesmanager |
+      | posmanager10@info.com   | posmanager   |
+      | posmanager55@info.com   | posmanager   |
 
 
